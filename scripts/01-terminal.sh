@@ -15,3 +15,12 @@ echo "Installing homebrew..."
   brew install yarn
 fi
 echo "Yarn is installed and configured"
+
+# Add a link to iCloud Drive in home folder
+echo "Linking iCloud Drive to home folder"
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ~/Desktop/iCloud\ Drive
+
+# Recover ssh key
+mkdir ~/.ssh
+cp private-data/ssh/id_rsa ~/.ssh/id_rsa
+cp private-data/ssh/id_rsa.pub ~/.ssh/id_rsa.pub
