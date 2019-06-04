@@ -1,3 +1,3 @@
 #!/bin/bash
 
-# Java, ffmpeg, mysql, etc.
+# Java, ffmpeg, mysql, docker, etc.
