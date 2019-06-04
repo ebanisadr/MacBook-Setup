@@ -47,3 +47,17 @@ if [[ ! $(which zsh) == *local* ]]; then
   echo $sudoPW | chsh -s /usr/local/bin/zsh
 fi
 echo "Zsh is installed"
+
+# Set up Terminal.app
+echo "Terminal.app:"
+if [[ ! $(defaults read com.apple.Terminal "Default Window Settings") == Default ]]; then
+  echo "Custom profile not found, installing it now"
+  /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ./data/Terminal/Default.terminal &
+  TERM_PID=$!
+  sleep 2
+  kill -15 $TERM_PID
+  defaults write com.apple.Terminal "Default Window Settings" Default
+  defaults write com.apple.Terminal "Startup Window Settings" Default
+fi
+echo "Terminal.app is configured"
+
