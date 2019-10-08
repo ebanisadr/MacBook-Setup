@@ -40,16 +40,17 @@ if [ ! -f ~/.ssh/id_rsa ]; then
   cp private-data/ssh/id_rsa.pub ~/.ssh/id_rsa.pub
 fi
 
+# Probably not necessary after macOS Catalina
 # Set up zsh
-echo "Zsh:"
-if [[ ! $(which zsh) == *local* ]]; then
-  echo "Replacing macOS default zsh with an updated version"
-  brew install zsh
-  read -s -p "Your password is required to add zsh to the system's list of shells: " sudoPW
-  echo $sudoPW | sudo -S sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
-  echo $sudoPW | chsh -s /usr/local/bin/zsh
-fi
-echo "Zsh is installed"
+# echo "Zsh:"
+# if [[ ! $(which zsh) == *local* ]]; then
+#   echo "Replacing macOS default zsh with an updated version"
+#   brew install zsh
+#   read -s -p "Your password is required to add zsh to the system's list of shells: " sudoPW
+#   echo $sudoPW | sudo -S sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+#   echo $sudoPW | chsh -s /usr/local/bin/zsh
+# fi
+# echo "Zsh is installed"
 
 # Set up Terminal.app
 echo "Terminal.app:"
