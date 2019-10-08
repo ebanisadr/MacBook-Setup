@@ -33,7 +33,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write com.apple.MultitouchTrackpad Clicking -bool true
 
 # Trackpad: incread tracking speed
-defaults write Apple\ Global\ Domain com.apple.trackpad.scaling 1.5
+defaults write Apple\ Global\ Domain com.apple.trackpad.scaling 2
 
 # Trackpad: enable soft click
 defaults write com.apple.MultitouchTrackpad FirstClickThreshold -int 0
@@ -86,7 +86,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # 12: Notification Center
 # 13: Lock Screen
 # Top left screen corner → Mission Control
-defaults write com.apple.dock wvous-br-corner -int 2
+defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Make Safari’s search banners default to Contains instead of Starts With

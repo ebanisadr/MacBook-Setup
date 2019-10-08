@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install xcode developer tools if we don't have them
+xcode-select --install
+
 # Install Homebrew if we don't have it
 echo "Homebrew:"
 if test ! $(which brew); then
