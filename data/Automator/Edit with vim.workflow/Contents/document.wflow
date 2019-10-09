@@ -62,7 +62,7 @@
 					<string>for f in "$@"
 do
 	osascript -e '
-		if application "Terminal" is not running then			tell application "Terminal"				activate				do script "vim '"$f"';exit" in front window			end tell		else			tell application "Terminal"				do script "vim '"$f"';exit"				activate			end tell		end if		tell application "Terminal" to set bounds of front window to {830, 23, 1680, 985}
+		if application "Terminal" is not running then			tell application "Terminal"				activate				do script "vim \"'"$f"'\";exit" in front window			end tell		else			tell application "Terminal"				do script "vim \"'"$f"'\";exit"				activate			end tell		end if		tell application "Terminal" to set bounds of front window to {830, 23, 1680, 985}
 	'
 done</string>
 					<key>CheckedForUserDefaultShell</key>
@@ -177,7 +177,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:551.000000</string>
+				<string>309.000000:541.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
