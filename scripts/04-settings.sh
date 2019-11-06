@@ -72,6 +72,12 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
+# Show full date in menubar
+defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d h:mm a"
+
+# Switch between dark and light mode based on the time
+defaults write "Apple Global Domain" "AppleInterfaceStyleSwitchesAutomatically" -int 1
+
 # Hot corners
 # Possible values:
 #  0: no-op
